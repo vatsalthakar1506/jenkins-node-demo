@@ -3,7 +3,7 @@ const {
     subtract,
     calculateDiscount,
     multiply,
-    devide
+    divide
 } = require("../src/math");
 
 describe("Math utilities", () => {
@@ -30,7 +30,7 @@ describe("Math utilities", () => {
         expect(multiply(10, 2)).toBe(20);
     });
     
-    test("devide two numbers", () => {
-        expect(devide(10, 2)).toBe(5);
+    test("divide two numbers", () => {
+        expect(divide(10, 2)).toBe(5);
     });
 });
