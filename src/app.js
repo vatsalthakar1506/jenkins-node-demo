@@ -41,4 +41,19 @@ app.get("/api/multiply", (req, res) => {
     });
 });
 
+app.get("/api/devide", (req, res) => {
+    const a = Number(req.query.a);
+    const b = Number(req.query.b);
+
+    if (!Number.isFinite(a) || !Number.isFinite(b)) {
+        return res.status(400).json({
+            error: "a and b must be valid numbers"
+        });
+    }
+
+    return res.json({
+        result:  devide(a, b)
+    });
+});
+
 module.exports = app;
